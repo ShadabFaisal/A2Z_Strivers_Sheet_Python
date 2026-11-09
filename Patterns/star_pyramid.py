@@ -9,3 +9,10 @@ def print_star_pyramid(n):
 
 n=int(input("Enter the number of rows: "))
 print_star_pyramid(n)
+
+"""
+          * 
+        * * * 
+      * * * * * 
+    * * * * * * * 
+"""
