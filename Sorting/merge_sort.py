@@ -5,8 +5,11 @@ class Solution:
             return 
         
         mid=low+(high-low)//2
+        
         self.merge_sort(nums, low, mid)
+
         self.merge_sort(nums, mid+1, high)
+
         self.merge(nums, low, mid, high)
 
     def merge(self, nums:list[int], low:int,mid:int, high:int):
