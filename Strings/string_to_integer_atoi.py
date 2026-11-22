@@ -18,12 +18,15 @@ class Solution:
                 break
             res=res*10 + int(char)
 
+        res=res*sign
+
         if res < -2**31:
             return -2**31
         elif res > 2**31-1:
             return 2**31-1
 
-        return res*sign
+        return res
+        
         
 
 
