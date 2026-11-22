@@ -2,6 +2,9 @@ class Solution:
     def myAtoi(self, s:str)->int:
         s=s.strip()
 
+        if not s: 
+            return 0
+
         sign=1
         res=0
 
@@ -14,6 +17,11 @@ class Solution:
             if not char.isdigit():
                 break
             res=res*10 + int(char)
+
+        if res < -2**31:
+            return -2**31
+        elif res > 2**31-1:
+            return 2**31-1
 
         return res*sign
         
